@@ -43,7 +43,7 @@ export class HubSpotMarketingEventsAPI {
     const event = this.insightToMarketingEvent(insight);
     
     try {
-      await this.client.patch(`/events/${this.appId}/${eventId}`, event);
+      await this.client.patch(`/events/${eventId}`, event);
       console.log(`Updated marketing event: ${eventId}`);
     } catch (error) {
       console.error('Error updating marketing event:', error);
@@ -56,7 +56,7 @@ export class HubSpotMarketingEventsAPI {
    */
   async deleteEvent(eventId: string): Promise<void> {
     try {
-      await this.client.delete(`/events/${this.appId}/${eventId}`);
+      await this.client.delete(`/events/${eventId}`);
       console.log(`Deleted marketing event: ${eventId}`);
     } catch (error) {
       console.error('Error deleting marketing event:', error);
