@@ -1,0 +1,44 @@
+{
+  "name": "hubspot-demand-to-event-synthesis-agent",
+  "version": "1.0.0",
+  "description": "HubSpot Marketing Events Synthesis Agent - Ingest and synthesize GA4, HubSpot, Google Search Console, and Google Ads data to create strategic HubSpot Marketing Events",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "hubspot",
+    "marketing-events",
+    "ga4",
+    "google-ads",
+    "search-console",
+    "analytics",
+    "synthesis"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^25.0.1",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "eslint": "^9.39.2",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6"
+  }
+}
